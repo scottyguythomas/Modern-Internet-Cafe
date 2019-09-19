@@ -1,0 +1,72 @@
+/*  Modification Log:
+/*  file: admin.css
+/*  author : Scott Thomas
+/*  date: 2019-9-6 8:17:10
+/*  last   : 2019-9-6 8:17:10
+*/
+.hvr-fade {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	background-color: rgba(29, 29, 29, 0.411);
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+.hvr-fade:hover,
+.hvr-fade:focus,
+.hvr-fade:active {
+	background-color: #2099d1b4;
+	color: white;
+}
+.hvr-fade-active {
+	background-color: #00aeff;
+	color: white;
+}
+.hvr-fade-red {
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+	background-color: rgba(29, 29, 29, 0.411);
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+.hvr-fade-red:hover,
+.hvr-fade-red:focus,
+.hvr-fade-red:active {
+	background-color: #d12020b4;
+	color: white;
+}
+
+#updateCommentButton {
+    margin: auto;
+    padding: 2% 5%;
+    background-color: #353535;
+    color: white;
+    -webkit-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+	transition: background-color 0.2s ease-out;
+}
+#updateCommentButton:hover {
+	background-color: #1c1c1c;
+}
+
+/* form fieldset input[type='text'] {
+	width: 30%;
+	display: inline-flex;
+	margin: 5%;
+	margin-top: 0;
+}
+
+form fieldset label {
+	margin: 5%;
+	margin-bottom: 1%;
+}
+#loginForm > fieldset > div
+{
+	display: inline;
+} */

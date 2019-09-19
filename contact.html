@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Modern Internet Café</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/base.css" />
+	<link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300i,400" rel="stylesheet">
+	<meta name="description" content="Let use know how we did" />
+	<script src="js/contact_validation.js" async></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<nav class="horizontalnav">
+			<ul>
+				<a href="index.html">
+					<li>Home</li>
+				</a>
+				<a href="newsletter.html">
+					<li>Newsletter</li>
+				</a>
+				<a href="contact.html">
+					<li>Contact</li>
+				</a>
+				<a href="php/admin.php">
+					<li>Login</li>
+				</a>
+			</ul>
+			<div class="rainbow"></div>
+		</nav>
+		<div class="overlay">
+			<div>
+				<h1>Modern Internet Café</h1>
+			</div>
+			<section id="contact" class="multiInputs">
+				<h2>Contact Us</h2>
+				<form action="php/forms.php" method="POST">
+					<fieldset>
+						<legend>Personal Information</legend>
+						<div>
+							<label for="firstName">*First Name:</label>
+							<br />
+							<input type="text" id="firstName" name="contact_first_name" placeholder="John" required />
+						</div>
+						<div>
+							<label for="lastName">*Last Name:</label>
+							<br />
+							<input type="text" id="lastName" name="contact_last_name" placeholder="Doe" required />
+						</div>
+						<div>
+							<label for="email">*Email Address:</label>
+							<br />
+							<input type="email" id="email" name="contact_email" value="@gmail.com" required />
+						</div>
+						<div>
+							<label for="phone">Phone Number:</label>
+							<br />
+							<input type="tel" id="phone" name="contact_phone" placeholder="(208) 555-1234"
+								pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
+						</div>
+					</fieldset>
+					<fieldset id="experienceField">
+						<legend>Experience Information</legend>
+						<div>
+							<label for="reason">*Reason for contact:</label>
+							<br />
+							<select name="contact_reason" id="reason" required>
+								<option value="Request">Request</option>
+								<option value="Complement">Complement</option>
+								<option value="Complaint">Complaint</option>
+								<option value="Question">Question</option>
+							</select>
+						</div>
+						<div>
+							<label for="contact_sat">How Satisfying Was Your Visit:</label>
+							<br />
+							<input type="range" name="contact_sat" min="1" max="5" />
+						</div>
+						<br>
+						<div>
+							<label for="textExp">Write Your Comments Below:</label>
+							<textarea name="cust_exp" id="textExp" rows="4" cols="50"></textarea>
+						</div>
+					</fieldset>
+					<br />
+					<div>
+						<input type="submit" value="Submit" name="contact_submit" />
+					</div>
+				</form>
+			</section>
+			<footer>
+				<div class="row">
+					<a href="tel:+12085554567">
+						<img src="images/phone.png" alt="phone" />
+					</a>
+				</div>
+				<div class="row">
+					<a href="mailto:website@example.com">
+						<img src="images/letter.png" alt="mail" />
+					</a>
+				</div>
+				<div class="row">
+					<a href="https://wwww.facebook.com/" target="_blank">
+						<img src="images/facebook.png" alt="facebook" />
+					</a>
+				</div>
+				<div class="row">
+					<a href="https://www.twitter.com/" target="_blank">
+						<img src="images/twitter.png" alt="twitter" />
+					</a>
+				</div>
+				<br />
+				<a id="icon-pack" href="https://icons8.com" target="_blank">Icon pack by Icons8</a>
+			</footer>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+@include screen-media(375px, 0)
+{
+	figure figcaption
+	{
+		font-size: $font-base * 0.9;
+	}
+}
+@include screen-media(400px, 0)
+{
+	table
+	{
+		tbody
+		{
+			th
+			{
+				font-size: $font-base*1.2;
+			}
+			td
+			{
+				font-size: $font-base*1.2;
+				text-align: right;
+			}
+		}
+		tfoot
+		{
+			td
+			{
+				font-size: $font-base * 0.8;
+				padding-right: 0;
+			}
+		}
+	}
+}
+@include screen-media(425px, 0)
+{
+	.horizontalnav
+	{
+		ul
+		{
+			a
+			{
+				height: $font-base * 3 + $font-base;
+				li
+				{
+					height: $font-base*2;
+					line-height: $font-base*2;
+				}
+			}
+		}
+	}
+}
+
+
+
+@include screen-media(500px, 0)
+{
+	h1
+	{
+		font-size: ($font-base * 3) * 0.8;
+	}
+	figure
+	{
+		width: 80%;
+	}
+	.container
+	{
+		width: 80%;
+	}
+	h2
+	{
+		font-size: ($font-base * 2) *0.8;
+	}
+	fieldset
+	{
+		#newsLetter
+		{
+			div:nth-of-type(1), div:nth-of-type(2)
+			{
+				width: 49%;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@include screen-media(600px, 0)
+{
+	#hours h2
+	{
+		margin-top: 6%;
+	}
+	article 
+	{
+		p 
+		{
+			font-size: $font-base * 1.1;
+		}
+	}
+}
+@include screen-media(700px, 0)
+{
+	h1
+	{
+		font-size: $font-base * 3.2;
+	}
+	h2 
+	{
+		font-size: $font-base * 2.2;
+	}
+	figure figcaption
+	{
+		font-size: $font-base;
+	}
+	table
+	{
+		width: 70%;
+		tbody
+		{
+			th
+			{
+				font-size: $font-base*1.5;
+			}
+			td
+			{
+				font-size: $font-base*1.5;
+				text-align: right;
+			}
+		}
+	}
+}
+
+@include screen-media(800px, 0)
+{
+	h1
+	{
+		font-size: $font-base * 3.5;
+	}
+	h2 
+	{
+		font-size: $font-base * 2.5;
+	}
+	article 
+	{
+		p 
+		{
+			font-size: $font-base * 1.2;
+		}
+	}
+}
+
+@include screen-media(900px, 0)
+{
+	.horizontalnav
+	{
+		ul
+		{
+			a
+			{
+				height: $font-base * 5 + $font-base;
+				li
+				{
+					height: $font-base;
+					line-height: $font-base;
+					font-size: $font-base*2
+				}
+			}
+		}
+	}
+	table
+	{
+		width: 50%;
+		tbody
+		{
+			th
+			{
+				font-size: $font-base*1.5;
+			}
+			td
+			{
+				font-size: $font-base*1.5;
+				text-align: right;
+			}
+		}
+		tfoot
+		{
+			td 
+			{
+				font-size: $font-base;
+			}
+		}
+	}
+	#newsLetter
+	{
+		fieldset
+		{
+			div
+			{
+				width: (100% / 4) - 1%;
+				
+				display: inline-block;
+				input
+				{					
+					width: 70%;
+					&[type="submit"]
+					{
+						width: 20%;
+					}
+				}
+			}
+		}
+	}
+	.multiInputs
+	{
+		fieldset
+		{
+			div
+			{
+				width: (100% / 4) - 1%;
+				
+				display: inline-block;
+				input
+				{					
+					width: 70%;
+					&[type="submit"]
+					{
+						width: 20%;
+					}
+					&[type="range"]
+					{
+						box-shadow: none;
+					}
+				}
+			}
+		}
+	}
+	form div
+	{
+		input[type="submit"]
+		{
+			padding: 2% 4%;
+			font-size: $font-base * 1.5;
+		}
+	}
+	article 
+	{
+		p 
+		{
+			font-size: $font-base * 1.5;
+		}
+	}
+}
+
+@for $i from 1px through 100px
+{
+	$i: $i * 100;
+	@include screen-media($i, 0)
+	{
+		h1:after
+		{
+			content: "";
+		}
+	}
+}

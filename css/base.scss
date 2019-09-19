@@ -1,0 +1,405 @@
+
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_classes.scss";
+
+.wrapper
+{
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+}
+
+.mobile1, .mobile2
+{
+	display: none;
+}
+
+//button reset
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button 
+{
+    color: none;
+    background-color: none;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+}
+
+label
+{
+	@extend %font-style1;
+	color: white;
+}
+
+.horizontalnav
+{
+	ul
+	{
+		display: flex;
+		padding: auto;
+		a
+		{
+			//top + bottom + lineheight
+			height: $font-base * 3 + ($font-base / 2);
+			background-color: $primary-color;
+			@extend %font-style1;
+			text-align: center;
+			flex-basis: $nav-width;
+			color: white;
+			@extend %links;
+			border-right: $primary-color-hover 1px solid;
+			transition: background-color 0.2s ease-out;
+			&:hover
+			{
+				background-color: $primary-color-hover;
+			}
+			&:first-of-type
+			{
+				flex-shrink: 2;
+			}
+			li
+			{
+				margin:
+				{
+					top: $font-base;
+					bottom: $font-base;
+				}
+				height: $font-base*1.500;
+				line-height: $font-base*1.500;
+			}
+		}
+	}
+	.rainbow
+	{
+		@include Rainbow();
+		width:500%;
+		height: 2px;
+	}
+	
+}
+
+h1
+{
+	@extend %h1base;
+	color: white;
+	margin:auto;
+	margin-top: 15%;
+	margin-bottom: 10%;
+}
+
+
+h2
+{
+	margin:
+	{
+		bottom: 5%;
+		top: 5%;
+	}
+	padding-top: 2%;
+	text-align: center;
+	font-size: $font-base * 2;
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+figure
+{
+	margin: auto;
+	margin-bottom: 10%;
+	width: 100%;
+	img
+	{
+		
+		width: 100%;
+		&#shop
+		{
+			padding: 30px;
+			filter: sepia(40%) grayscale(20%);
+			transform: scaleY(0.8);
+		}
+	}
+	figcaption
+	{
+		@extend %font-style1;
+		border: 10px solid transparent;
+		border-image: url(../images/border2.png) 30 stretch;
+		font-size: $font-base * 0.70;
+		text-align: center;
+		color: lighten($primary-color-hover, 50%);
+		margin-top: -$font-base * 9;
+		margin-left: 95%;
+		width: 4%;
+	}
+}
+
+article
+{
+	p
+	{
+		
+		@extend %glass;
+		color: white;
+		width: 80%;
+		margin: auto;
+		padding: 5% 10%;
+		text-align: center;
+		font-size: $font-base;
+		text-shadow: 5px 5px 15px #111;
+		font-family: 'Lato', sans-serif;
+	}
+}
+
+div
+{
+	img
+	{
+		@extend %images;
+	}
+}
+
+#menu
+{
+	@extend %glass;
+	div
+	{
+		img
+		{
+			width: 100%;
+			box-shadow: 0px 0px 5px 5px #666;
+			&#menu_1
+			{
+				border-top-left-radius: 10px;
+			}
+			&#menu_2
+			{
+				border-bottom-left-radius: 10px;
+			}
+			&#menu_3
+			{
+				border-top-right-radius: 10px;
+			}
+			&#menu_4
+			{
+				border-bottom-right-radius: 10px;
+			}
+		}
+	}
+}
+
+.container
+{
+	width: 90%;
+	margin: auto;
+	padding-bottom: 5%;
+}
+
+.card
+{
+	width: 100%;
+	margin: auto;
+	margin-top: 5%;
+	padding: auto;
+	text-align: center;
+	background-color: white;
+	height: 500px;
+}
+
+#hours
+{
+	@extend %glass;
+}
+
+div.overlay
+{
+	section
+	{
+		@extend %glass;
+	}
+}
+
+footer
+{
+	$footer-text: lighten($primary-color, 50%);
+	margin-top: 15%;
+	position: relative;
+	bottom: -1px;
+	background-color: $secondary-color;
+	width: 100%;
+	text-align: center;
+	color: $footer-text;
+	@extend %font-style1;
+	font-size: $font-base * 0.6;
+	padding-top: 2%;
+	.row
+	{
+		img
+		{
+			width:auto;
+			height: $font-base*3;
+		}
+	}
+	a, a:visited
+	{
+		@extend %links;
+		color: $footer-text;
+	}
+	div
+	{
+		&.row
+		{
+			padding: 1%;
+			display: inline-table;
+			width: 10%;
+		}
+	}
+	#icon-pack
+	{
+		display: block;
+		margin-top: $font-base*1.5;
+	}
+}
+
+table
+{
+	margin: auto;
+	table-layout: auto;
+	width: 100%;
+	color: white;
+	tbody
+	{
+		th
+		{
+			padding: 1%;
+			text-align: left;
+			width: $grid-width*5;
+			border: 1px solid rgba(255, 255, 255, 0.9);
+		}
+		td 
+		{
+			text-align: center;
+			padding: 1%;
+			border: 1px solid rgba(255, 255, 255, 0.9);
+		}
+	}
+	tfoot
+	{
+		td
+		{
+			font-size: $font-base * 0.7;
+			text-align: right;
+			padding-right: 10%;
+			border: none;
+			border-collapse: collapse;
+		}
+	}
+}
+
+#newsLetter
+{
+	@extend %glass;
+	padding-bottom: 5%;
+}
+
+form
+{
+	fieldset
+	{
+		background-color: darken($glass-color, 50%);
+		color:white;
+		text-align: center;
+		margin: 10%;
+		margin-bottom: 5%;
+		padding-bottom: 4%;
+
+
+		border: 1px solid lighten($glass-color, 30%);
+		@extend %font-style1;
+		label
+		{
+			text-align: center;
+			margin: auto;
+			margin-bottom: 1%;
+
+			display: block;
+
+		}
+		input
+		{
+			margin: auto;
+			margin-bottom: 10%;
+			display: block;
+			width: 80%;
+			box-shadow: 0 0 10px 2px #333;
+			height: $font-base*1.5;
+			background-color: rgb(241, 241, 241);
+			border: none;
+			border-radius: 24px;
+			color: black;
+			padding: 15px 20px;
+			text-align: center;
+			&#mobile_signup
+			{
+				box-shadow: none;
+				display: inline;
+				font-size: $font-base;
+			}
+		}
+		legend
+		{
+			border: 1px solid lighten($glass-color, 30%);
+			margin: auto;
+			margin-bottom: 10%;
+			padding: 1%;
+			text-shadow: 1px 1px 1px #222;
+		}
+	}
+	div
+	{
+		text-align: center;
+		input[type="submit"]
+		{
+			margin: auto;
+			padding: 5% 15%;
+			background-color: opacify($primary-color, 1);
+			color: white;
+			transition: background-color 0.2s ease-out;
+			
+			&:hover
+			{
+				background-color: darken(opacify($primary-color-hover, 0.9), 20%);
+			}
+		}
+		#reason
+		{
+			height: $font-base * 2.5 ;
+			width: 25%;
+		}
+	}
+}
+
+#contact
+{
+	@extend %glass;
+	padding-bottom: 5%;
+}
+
+@keyframes Scroll-Right
+{
+	0%
+	{
+		left: 0
+	}
+	100%
+	{
+		left: -$rainbow-width*0.8;
+	}
+}
+
+
+@import "_media_queries.scss";
+
+/*
+    Contact Us page containing text area 
+	Link from your portfolio page to your new business page.
+*/
